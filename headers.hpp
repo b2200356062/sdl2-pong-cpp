@@ -12,6 +12,8 @@
 #include <cmath>
 #include <random>
 
+#define SCREEN_WIDTH 800
+#define SCREEN_HEIGHT 600
 
 using namespace std;
 
