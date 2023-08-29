@@ -1,0 +1,3 @@
+C:/Users/melih/Desktop/comp stuff/cpp/dataorient/cmake-build-debug/CMakeFiles/dataorient.dir
+C:/Users/melih/Desktop/comp stuff/cpp/dataorient/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/melih/Desktop/comp stuff/cpp/dataorient/cmake-build-debug/CMakeFiles/rebuild_cache.dir

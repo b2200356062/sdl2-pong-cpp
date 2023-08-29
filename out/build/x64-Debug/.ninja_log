@@ -1,0 +1,9 @@
+# ninja log v5
+26	935	7150186643927747	CMakeFiles/dataorient.dir/ecs.cpp.obj	d6807bc948f247c8
+11	1252	7150186647050725	CMakeFiles/dataorient.dir/texturemanager.cpp.obj	ba2e405b6591d605
+37	1257	7150186647120727	CMakeFiles/dataorient.dir/ball.cpp.obj	fb0b755a023ef60e
+4	1258	7150186647110722	CMakeFiles/dataorient.dir/main.cpp.obj	2c7b2ed3cffc584f
+7	1260	7150186647140748	CMakeFiles/dataorient.dir/game.cpp.obj	d5f1310688566b7f
+16	1267	7150186647210729	CMakeFiles/dataorient.dir/gameobject.cpp.obj	38e029eff8386656
+31	1268	7150186647220726	CMakeFiles/dataorient.dir/player.cpp.obj	afb32fb0d4b033c2
+21	1281	7150186647380725	CMakeFiles/dataorient.dir/map.cpp.obj	62e87362fb67375d
