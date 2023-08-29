@@ -34,7 +34,7 @@ void Player::update() {
 }
 
 void Player::render() {
-    SDL_RenderCopy(Game::renderer, objectTexture, &srcRect, &destRect);
+
 }
 
 Player::~Player() {
