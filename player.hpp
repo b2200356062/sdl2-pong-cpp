@@ -1,3 +1,4 @@
+#pragma once
 
 #ifndef DATAORIENT_PLAYER_HPP
 #define DATAORIENT_PLAYER_HPP

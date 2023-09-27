@@ -1,8 +1,8 @@
+#pragma once
 
 #ifndef DATAORIENT_BALL_HPP
 #define DATAORIENT_BALL_HPP
 #define BALL_VELOCITY 7
-
 
 #include "gameobject.hpp"
 

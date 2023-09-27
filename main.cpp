@@ -18,7 +18,7 @@ int main(int argc, char* argv[]) {
 
     game = new Game();
 
-    game->init("pencere", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, 0);
+    game->init("pencere", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_RENDERER_ACCELERATED);
 
     game->load();
 
