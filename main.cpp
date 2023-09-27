@@ -11,6 +11,7 @@ int main(int argc, char* argv[]) {
     float frameTime;
 
     // top oyun basında rastgele bi tarafa ilerleyerek baslayacak
+    // renderer yaz
     // skor da olmalı - ui
     // collision detection ve movement
     // müzük belki
@@ -34,5 +35,7 @@ int main(int argc, char* argv[]) {
 //        }
     }
     game->clean();
+    free(game);
+    game = nullptr;
     return 0;
 }

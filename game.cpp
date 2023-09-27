@@ -6,8 +6,7 @@
 SDL_Renderer* Game::renderer = nullptr;
 
 Game::Game() {
-    std::default_random_engine e((unsigned int)time(0));
-    random = e() % 2;
+
 }
 
 Game::~Game() {
@@ -39,13 +38,6 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, in
 
     SDL_SetRenderDrawColor(renderer,0,0,0,255);
 
-    if(random == 0){
-        // ball movement
-    }
-    else{
-
-    }
-
     isRunning = true;
 }
 
@@ -57,6 +49,16 @@ void Game::load() {
     player1 = new Player(48, 320, "assets/pong1.png");
     player2 = new Player(700, 320, "assets/pong1.png");
     ball = new Ball(370, 320, "assets/pong2.png");
+
+    // ball start side
+    if (ball->startside() == 1){
+        ball->xvel += BALL_VELOCITY;
+        ball->yvel += BALL_VELOCITY;
+    }
+    else{
+        ball->xvel -= BALL_VELOCITY;
+        ball->yvel -= BALL_VELOCITY;
+    }
 }
 
 void Game::handleEvents() {
@@ -87,8 +89,6 @@ void Game::handleEvents() {
                     player2->yvel += PLAYER_VELOCITY;
                     break;
                 }
-                break;
-
             case SDL_KEYUP:
                 if(event.key.keysym.sym == SDLK_w && event.key.repeat == 0){
                     player1->yvel += PLAYER_VELOCITY;
@@ -106,7 +106,6 @@ void Game::handleEvents() {
                     player2->yvel -= PLAYER_VELOCITY;
                     break;
                 }
-                break;
             default:
                 break;
         }
@@ -125,10 +124,9 @@ void Game::update() {
 
 void Game::render() {
     SDL_RenderClear(renderer);
-    player1->render();
-    ball->render();
-    player2->render();
-    SDL_RenderPresent(renderer);
+    player1->render(renderer);
+    ball->render(renderer);
+    player2->render(renderer);
 }
 
 void Game::clean() {

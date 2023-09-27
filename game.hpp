@@ -3,8 +3,6 @@
 #ifndef DATAORIENT_GAME_HPP
 #define DATAORIENT_GAME_HPP
 
-#include "headers.hpp"
-#include "texturemanager.hpp"
 #include "gameobject.hpp"
 
 class Game{

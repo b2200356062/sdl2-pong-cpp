@@ -10,10 +10,11 @@ class Player : public GameObject{
 public:
 
     Player(float posx, float posy, const std::string& fileName);
-    ~Player();
+    ~Player() override;
 
     void update() override;
-    void render() override;
+    void render(SDL_Renderer* renderer) override;
+    void scoreupdate();
 
 private:
 

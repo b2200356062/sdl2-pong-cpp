@@ -22,9 +22,8 @@ void GameObject::update() {
     }
 }
 
-void GameObject::render() {
+void GameObject::render(SDL_Renderer *renderer) {
 
-    SDL_RenderCopy(Game::renderer, objectTexture, nullptr, &destRect);
 }
 
 GameObject::~GameObject() {

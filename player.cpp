@@ -33,8 +33,9 @@ void Player::update() {
     destRect.y = int(ypos);
 }
 
-void Player::render() {
-
+void Player::render(SDL_Renderer *renderer) {
+    SDL_RenderCopy(renderer, objectTexture, &srcRect, &destRect);
+    SDL_RenderPresent(renderer);
 }
 
 Player::~Player() {

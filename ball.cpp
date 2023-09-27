@@ -21,12 +21,14 @@ Ball::Ball(float posx, float posy, const std::string& fileName) {
     this->destRect.y = int(ypos);
     this->destRect.h = 48;
     this->destRect.w = 32;
+
 }
 
 void Ball::update() {
+
     ypos += yvel;
 
-    if(ypos < 5 || ypos > SCREEN_HEIGHT - height - 5){
+    if(ypos < 0 || ypos > SCREEN_HEIGHT){
         ypos -= yvel;
     }
 
@@ -40,10 +42,18 @@ void Ball::update() {
     destRect.y = int(ypos);
 }
 
-void Ball::render() {
+void Ball::render(SDL_Renderer *renderer) {
+    SDL_RenderCopy(renderer, objectTexture, &srcRect, &destRect);
+    SDL_RenderPresent(renderer);
 }
 
 Ball::~Ball() {
     cout << "ball destructed" << endl;
     SDL_DestroyTexture(objectTexture);
+}
+
+unsigned Ball::startside() {
+    std::default_random_engine e((unsigned int)time(nullptr));
+    random = e() % 2;
+    return random;
 }

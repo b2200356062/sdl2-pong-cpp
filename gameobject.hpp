@@ -13,7 +13,7 @@ public:
     virtual ~GameObject();
 
     virtual void update() = 0;
-    virtual void render() = 0;
+    virtual void render(SDL_Renderer *renderer) = 0;
     void checkCollision(GameObject* object1);
 
     float yvel;
